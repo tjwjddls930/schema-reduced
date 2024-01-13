@@ -62,7 +62,7 @@ const TopNavbar = () => {
   const formattedTime = `${parts[1]} ${parts[0]}`; // rearrange the order
 
   return (
-    <div className="fixed flex top-3 h-16 w-full z-100 justify-between items-center px-4">
+    <div className="fixed flex top-3 h-16 w-full z-100 justify-between items-center px-2 md:px-4">
       <img 
         src="/img/schema-logo-NEW.svg"
         alt="logo1"
@@ -73,7 +73,7 @@ const TopNavbar = () => {
         alt="logo2"
         className="md:h-12 md:w-[150px] h-8 w-[100px]"
       />
-      <div className="flex flex-row space-x-2 text-black mr-4">
+      <div className="flex flex-row space-x-2 text-black md:mr-4">
           <div className="flex flex-col justify-center items-center">
               <span className="font-bold md:text-sm text-[10px]">{formattedDate}</span>
               <span className="font-bold md:text-xl text-base">{formattedTime}</span>

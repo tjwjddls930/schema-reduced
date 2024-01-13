@@ -6,38 +6,38 @@ import clsx from "clsx";
 
 const introButton = {
     KOR: (size)=> (
-        <div className={`flex flex-col space-y-2 ${size ? `screen-w:space-y-8` : `screen-w:space-y-4`}`}>
-            <span className={`font-bold text-lg animate-bounce ${size ? `screen-w:text-8xl` : `screen-w:text-6xl`}`}>{"미술관 소개"}</span>
-            <span className={`font-bold text-sm ${size ? `screen-w:text-6xl` : `screen-w:text-4xl`}`}>{"김재관 및 미술관 소개"}</span>
-            <span className={`font-bold text-sm ${size ? `screen-w:text-6xl` : `screen-w:text-4xl`}`}>{"쉐마국제미술상"}</span>
+        <div className={`flex flex-col ${size ? `space-y-3` : `space-y-2`}`}>
+            <span className={`font-bold animate-bounce ${size ? `text-base` : `text-sm`}`}>{"미술관 소개"}</span>
+            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"김재관 및 미술관 소개"}</span>
+            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"쉐마국제미술상"}</span>
         </div>
     ),
     ENG: (size) => (
-        <div className={`flex flex-col space-y-2 ${size ? `screen-w:space-y-8` : `screen-w:space-y-4`}`}>
-            <span className={`font-bold text-lg animate-bounce ${size ? `screen-w:text-8xl` : `screen-w:text-6xl`}`}>{"Museum Introduction"}</span>
-            <span className={`font-bold text-sm ${size ? `screen-w:text-6xl` : `screen-w:text-4xl`}`}>{"Museum Introduction and Structure"}</span>
-            <span className={`font-bold text-sm ${size ? `screen-w:text-6xl` : `screen-w:text-4xl`}`}>{"Jai-Kwan Kim Career Exprience"}</span>
+        <div className={`flex flex-col ${size ? `space-y-3` : `space-y-2`}`}>
+            <span className={`font-bold animate-bounce ${size ? `text-base` : `text-sm`}`}>{"Museum Introduction"}</span>
+            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"Museum Introduction and Structure"}</span>
+            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"Jai-Kwan Kim Career Exprience"}</span>
         </div>
     ),
     CH: (size) => (
-        <div className={`flex flex-col space-y-2 ${size ? `screen-w:space-y-8` : `screen-w:space-y-4`}`}>
-            <span className={`font-bold text-lg animate-bounce ${size ? `screen-w:text-8xl` : `screen-w:text-6xl`}`}>{"博物馆简介"}</span>
-            <span className={`font-bold text-sm ${size ? `screen-w:text-6xl` : `screen-w:text-4xl`}`}>{"博物馆简介及结构"}</span>
-            <span className={`font-bold text-sm ${size ? `screen-w:text-6xl` : `screen-w:text-4xl`}`}>{"Jai-Kwan Kim 主要职业经历"}</span>
+        <div className={`flex flex-col ${size ? `space-y-3` : `space-y-2`}`}>
+            <span className={`font-bold animate-bounce ${size ? `text-base` : `text-sm`}`}>{"博物馆简介"}</span>
+            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"博物馆简介及结构"}</span>
+            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"Jai-Kwan Kim 主要职业经历"}</span>
         </div>
     ),
     TH: (size) => (
-        <div className={`flex flex-col space-y-2 ${size ? `screen-w:space-y-8` : `screen-w:space-y-4`}`}>
-            <span className={`font-bold text-lg animate-bounce ${size ? `screen-w:text-8xl` : `screen-w:text-6xl`}`}>{"ความรู้เบื้องต้นเกี่ยวกับพิพิธภัณฑ์"}</span>
-            <span className={`font-bold text-sm ${size ? `screen-w:text-6xl` : `screen-w:text-4xl`}`}>{"บทนำและโครงสร้างของพิพิธภัณฑ์"}</span>
-            <span className={`font-bold text-sm ${size ? `screen-w:text-6xl` : `screen-w:text-4xl`}`}>{"ประสบการณ์การทำงานระดับเมเจอร์ของแจกวาน คิม"}</span>
+        <div className={`flex flex-col ${size ? `space-y-3` : `space-y-2`}`}>
+            <span className={`font-bold animate-bounce ${size ? `text-base` : `text-sm`}`}>{"ความรู้เบื้องต้นเกี่ยวกับพิพิธภัณฑ์"}</span>
+            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"บทนำและโครงสร้างของพิพิธภัณฑ์"}</span>
+            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"ประสบการณ์การทำงานระดับเมเจอร์ของแจกวาน คิม"}</span>
         </div>
     ),
     VI: (size) => (
-        <div className={`flex flex-col space-y-2 ${size ? `screen-w:space-y-8` : `screen-w:space-y-4`}`}>
-            <span className={`font-bold text-lg animate-bounce ${size ? `screen-w:text-8xl` : `screen-w:text-6xl`}`}>{"Giới thiệu về bảo tàng"}</span>
-            <span className={`font-bold text-sm ${size ? `screen-w:text-6xl` : `screen-w:text-4xl`}`}>{"Giới thiệu và cấu trúc bảo tàng"}</span>
-            <span className={`font-bold text-sm ${size ? `screen-w:text-6xl` : `screen-w:text-4xl`}`}>{"Jai-Kwan Kim Kinh nghiệm nghề nghiệp chính"}</span>
+        <div className={`flex flex-col ${size ? `space-y-3` : `space-y-2`}`}>
+            <span className={`font-bold animate-bounce ${size ? `text-base` : `text-sm`}`}>{"Giới thiệu về bảo tàng"}</span>
+            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"Giới thiệu và cấu trúc bảo tàng"}</span>
+            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"Jai-Kwan Kim Kinh nghiệm nghề nghiệp chính"}</span>
         </div>
     ),
 };
@@ -148,7 +148,7 @@ const Button = () => {
 
     return(
         <section className={clsx(
-            "md:w-3/4 w-5/6 h-2/3 pt-8 px-14 flex flex-col space-y-5 mx-auto" )}>
+            "md:w-3/4 w-5/6 h-2/3 pt-2 px-4 md:pt-8 md:px-14 flex flex-col space-y-5 mx-auto" )}>
                 <div className="h-1/2 w-full flex flex-row space-x-5 mx-auto items-end">
                     <div className="md:w-[70%] w-[85%] h-full relative shadow-md rounded-sm mx-auto bg-[url('/img/intro_bg.jpg')] bg-cover bg-no-repeat"
                     >
