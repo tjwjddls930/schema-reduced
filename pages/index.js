@@ -100,7 +100,7 @@ export default function Home() {
       setSign(`${process.env.NEXT_PUBLIC_CLOUDFLARE_R2_ENDPOINT}/sign-docents/schema-sign-docent-main-4.webm`)
   }, []);
   return(
-    <div className="h-screen w-screen flex flex-col justify-center items-start">
+    <div className="h-screen w-screen flex flex-col md:items-center md:justify-center">
       <div className="absolute inset-0 bg-cover bg-no-repeat bg-[url('/img/kiosk_main_bg.png')]"
       style={{
           zIndex: -1
@@ -109,7 +109,7 @@ export default function Home() {
       </div>
       {/* 상단 로고 섹션 */}
       <TopNavbar />
-      <div className="w-5/6 h-12 md:h-auto flex mx-auto text-center items-start justify-center">
+      <div className="w-5/6 h-12 pt-28 pb-4 md:p-0 md:h-auto flex mx-auto text-center items-center justify-center">
           <span className="flex md:text-base text-xs text-gray-700 font-bold">
               {topText[language]}
           </span>
