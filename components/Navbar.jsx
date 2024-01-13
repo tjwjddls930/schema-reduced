@@ -421,7 +421,7 @@ const Navbar = ({ url, sign }) => {
       )} */}
       {/* 언어변경 버튼 */}
       <button 
-          className={clsx(`md:hidden absolute transform -translate-x-1/2 left-1/2 bottom-8 text-black space-y-4`)}
+          className={clsx(`md:hidden absolute transform -translate-x-1/2 left-1/2 bottom-12 text-black space-y-4`)}
           onClick={()=>setModal(!modal)}    
       >
           <div className="flex flex-col">

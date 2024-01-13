@@ -148,7 +148,7 @@ const Button = () => {
 
     return(
         <section className={clsx(
-            "md:w-3/4 w-5/6 h-2/3 pt-2 px-4 md:pt-8 md:px-14 flex flex-col space-y-5 mx-auto" )}>
+            "md:w-3/4 w-5/6 md:h-2/3 h-[55%] pt-2 px-4 md:pt-8 md:px-14 flex flex-col space-y-5 mx-auto" )}>
                 <div className="h-1/2 w-full flex flex-row space-x-5 mx-auto items-end">
                     <div className="md:w-[70%] w-[85%] h-full relative shadow-md rounded-sm mx-auto bg-[url('/img/intro_bg.jpg')] bg-cover bg-no-repeat"
                     >
