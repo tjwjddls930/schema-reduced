@@ -343,13 +343,13 @@ const Navbar = ({ url, sign }) => {
     <>
       {soundguide && (
         <div
-          className={clsx("absolute top-0 left-0 h-[94%] screen-w:h-[97.5%] w-screen bg-black bg-opacity-60 z-20")}
+          className={clsx("absolute top-0 left-0 h-[91.5%] w-screen bg-black bg-opacity-60 z-20")}
           onClick={() => {
             setSoundguide(!soundguide)
           }}
         >
           <div
-            className={clsx("absolute transform -translate-x-1/2 left-1/2 bottom-4 h-1/2 w-2/3 z-40")}
+            className={clsx("absolute transform -translate-x-1/2 left-1/2 bottom-0 h-2/3 w-3/4 z-40")}
             onClick={() => {
               setSoundguide(!soundguide)
             }}
@@ -368,13 +368,13 @@ const Navbar = ({ url, sign }) => {
       )}
       {signLang && (
         <div
-        className={clsx("absolute top-0 left-0 h-[94%] w-screen bg-black bg-opacity-60 z-20")}
+        className={clsx("absolute top-0 left-0 h-[91.5%] w-screen bg-black bg-opacity-60 z-20")}
         onClick={() => {
           setsignLang(!signLang)
         }}
       >
         <div
-          className={clsx("absolute transform -translate-x-1/2 left-1/2 bottom-4 h-1/2 w-2/3 z-40")}
+          className={clsx("absolute transform -translate-x-1/2 left-1/2 bottom-0 h-2/3 w-3/4 z-40")}
           onClick={() => {
             setsignLang(!signLang)
           }}
