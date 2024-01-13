@@ -451,7 +451,7 @@ const Navbar = ({ url, sign }) => {
             >
               <div className="flex flex-row mx-auto space-x-4 md:space-x-6 screen-w:space-x-24 z-40">
                 {/* 한국어 */}
-                <button className="h-[90px] w-[150px] md:h-[150px] md:w-[250px] z-40 bg-white shadow-lg rounded-lg focus:bg-blue-800 text-black focus:text-white">
+                <button className="h-[50px] w-[100px] md:h-[150px] md:w-[250px] z-40 bg-white shadow-lg rounded-lg focus:bg-blue-800 text-black focus:text-white">
                   <div
                     id="ko"
                     className="flex h-full w-full items-center"
@@ -468,7 +468,7 @@ const Navbar = ({ url, sign }) => {
                   </div>
                 </button>
                 {/* 영어 */}
-                <button className="h-[90px] w-[150px] md:h-[150px] md:w-[250px] z-40 bg-white shadow-lg rounded-lg focus:bg-blue-800 text-black focus:text-white">
+                <button className="h-[50px] w-[100px] md:h-[150px] md:w-[250px] z-40 bg-white shadow-lg rounded-lg focus:bg-blue-800 text-black focus:text-white">
                   <div
                     id="en"
                     className="flex h-full w-full items-center"
@@ -487,7 +487,7 @@ const Navbar = ({ url, sign }) => {
               </div>
               <div className="flex flex-row mx-auto space-x-4 md:space-x-6 z-40">
                 {/* 중국어 */}
-                <button className="h-[90px] w-[150px] md:h-[150px] md:w-[250px] z-40 bg-white shadow-lg rounded-lg focus:bg-blue-800 text-black focus:text-white">
+                <button className="h-[50px] w-[100px] md:h-[150px] md:w-[250px] z-40 bg-white shadow-lg rounded-lg focus:bg-blue-800 text-black focus:text-white">
                   <div
                     id="zh"
                     className="flex h-full w-full items-center"
@@ -504,7 +504,7 @@ const Navbar = ({ url, sign }) => {
                   </div>
                 </button>
                 {/* 태국어 */}
-                <button className="h-[90px] w-[150px] md:h-[150px] md:w-[250px] z-40 bg-white shadow-lg rounded-lg focus:bg-blue-800 text-black focus:text-white">
+                <button className="h-[50px] w-[100px] md:h-[150px] md:w-[250px] z-40 bg-white shadow-lg rounded-lg focus:bg-blue-800 text-black focus:text-white">
                   <div
                     id="th"
                     className="flex h-full w-full items-center"
@@ -521,7 +521,7 @@ const Navbar = ({ url, sign }) => {
                   </div>
                 </button>
                 {/* 베트남어 */}
-                <button className="h-[90px] w-[150px] md:h-[150px] md:w-[250px] z-40 bg-white shadow-lg rounded-lg focus:bg-blue-800 text-black focus:text-white">
+                <button className="h-[50px] w-[100px] md:h-[150px] md:w-[250px] z-40 bg-white shadow-lg rounded-lg focus:bg-blue-800 text-black focus:text-white">
                   <div
                     id="vi"
                     className="flex h-full w-full items-center"
