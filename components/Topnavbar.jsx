@@ -62,23 +62,23 @@ const TopNavbar = () => {
   const formattedTime = `${parts[1]} ${parts[0]}`; // rearrange the order
 
   return (
-    <div className="fixed sm:flex top-3 h-16 w-full z-100 justify-between items-center px-4">
+    <div className="fixed md:flex top-3 h-16 w-full z-100 justify-between items-center px-4">
       <img 
         src="/img/schema-logo-NEW.svg"
         alt="logo1"
-        className="h-12 w-[150px] sm:w-[80px]"
+        className="h-12 w-[150px] md:w-[80px]"
       />
         <img 
         src="/img/schema-logo.png"
         alt="logo2"
-        className="h-12 w-[150px] sm:w-[80px]"
+        className="h-12 w-[150px] md:w-[80px]"
       />
       <div className="flex flex-row space-x-2 text-black mr-4">
           <div className="flex flex-col justify-center items-center">
-              <span className="font-bold text-sm sm:text-xs">{formattedDate}</span>
-              <span className="font-bold text-xl sm:text-lg">{formattedTime}</span>
+              <span className="font-bold text-sm md:text-xs">{formattedDate}</span>
+              <span className="font-bold text-xl md:text-lg">{formattedTime}</span>
           </div>
-          <span className="rounded-lg shadow-md px-4 py-4 text-lg sm:text-base font-bold">{temperature ? `${temperature}°` : "24°"}</span>
+          <span className="rounded-lg shadow-md px-4 py-4 text-lg md:text-base font-bold">{temperature ? `${temperature}°` : "24°"}</span>
       </div>
     </div>
   );
