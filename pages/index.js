@@ -110,7 +110,7 @@ export default function Home() {
       {/* 상단 로고 섹션 */}
       <TopNavbar />
       <div className="w-5/6 flex mx-auto text-center items-end justify-center">
-          <span className="flex text-base md:text-sm text-gray-700 font-bold">
+          <span className="flex md:text-base text-xs text-gray-700 font-bold">
               {topText[language]}
           </span>
       </div>
@@ -119,7 +119,7 @@ export default function Home() {
           <Button />
       </Suspense>
       {/* 하단 텍스트 */}
-      <div className="flex md:hidden flex-row space-x-4 text-base font-bold pt-4">
+      <div className="hidden md:flex flex-row space-x-4 text-base font-bold pt-4">
           {bottomText[language](fontsize)}
       </div>
       {/* navbar */}

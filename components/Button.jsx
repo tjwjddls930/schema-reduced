@@ -148,9 +148,9 @@ const Button = () => {
 
     return(
         <section className={clsx(
-            "w-3/4 sm:5/6 h-2/3 pt-8 px-14 flex flex-col space-y-5 mx-auto" )}>
+            "md:w-3/4 w-5/6 h-2/3 pt-8 px-14 flex flex-col space-y-5 mx-auto" )}>
                 <div className="h-1/2 w-full flex flex-row space-x-5 mx-auto items-end">
-                    <div className="w-[70%] md:w-[85%] h-full relative shadow-md rounded-sm mx-auto bg-[url('/img/intro_bg.jpg')] bg-cover bg-no-repeat"
+                    <div className="md:w-[70%] w-[85%] h-full relative shadow-md rounded-sm mx-auto bg-[url('/img/intro_bg.jpg')] bg-cover bg-no-repeat"
                     >
                         <div className="absolute inset-0 w-full h-full bg-black opacity-10" />
                         <button className="h-full w-full text-center text-white bg-[url('/img/미술관소개_도형.png')] bg-no-repeat bg-cover mx-auto z-10 hover:translate-y-2"
@@ -158,7 +158,7 @@ const Button = () => {
                             {introButton[language](fontsize)}
                         </button>
                     </div>
-                    <div className="w-[70%] md:w-[85%] h-full relative shadow-md rounded-sm mx-auto bg-[url('/img/exhibit_bg.jpg')] bg-cover bg-no-repeat"
+                    <div className="md:w-[70%] w-[85%] h-full relative shadow-md rounded-sm mx-auto bg-[url('/img/exhibit_bg.jpg')] bg-cover bg-no-repeat"
                     >
                         <div className="absolute inset-0 w-full h-full bg-black opacity-10" />
                         <button className="w-full h-full text-center text-white bg-[url('/img/전시안내_도형.png')] bg-cover bg-no-repeat mx-auto z-10">
@@ -167,7 +167,7 @@ const Button = () => {
                     </div>
                 </div>
                 <div className="h-1/2 w-full flex flex-row space-x-5 mx-auto items-end">
-                    <div className="w-[70%] md:w-[85%] h-full relative shadow-md rounded-sm mx-auto bg-[url('/img/chat_bot_button_2.png')] bg-cover bg-no-repeat"
+                    <div className="md:w-[70%] w-[85%] h-full relative shadow-md rounded-sm mx-auto bg-[url('/img/chat_bot_button_2.png')] bg-cover bg-no-repeat"
                         onClick={()=>router.push("https://schema-gpt-final-v1.vercel.app/")}
                     > 
                         <div className="absolute inset-0 w-full h-full bg-black opacity-10" />
@@ -175,7 +175,7 @@ const Button = () => {
                             {chatbotButton[language](fontsize)}
                         </button>
                         </div>
-                    <div className="w-[70%] md:w-[85%] h-full relative shadow-md rounded-sm mx-auto bg-[url('/img/education_bg.jpg')] bg-cover bg-repeat"
+                    <div className="md:w-[70%] w-[85%] h-full relative shadow-md rounded-sm mx-auto bg-[url('/img/education_bg.jpg')] bg-cover bg-repeat"
                     >
                         <div className="absolute inset-0 w-full h-full bg-black opacity-10" />
                         <button className="text-center text-white h-full w-full mx-auto bg-[url('/img/교육프로그램_도형.png')] bg-no-repeat bg-cover z-10">

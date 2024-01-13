@@ -74,73 +74,73 @@ const textSize = {
   ),
 };
 
-const volumeControl = {
-  KOR: (func, hide) => (
-    <div className="flex flex-row space-x-2 w-[200px] justify-center text-center items-center">
-      <span className="text-xl w-[200px] mx-auto font-bold text-white">
-        {"볼륨조절"}
-      </span>
-      <button
-        onClick={func}
-        className="rounded-full h-2/3 w-[150px] bg-blue-500 text-white font-bold"
-      >
-        {"조절"}
-      </button>
-    </div>
-  ),
-  ENG: (func, hide) => (
-    <div className={clsx("flex flex-row space-x-2 w-[200px] justify-center text-center items-center")}>
-      <span className="text-xl w-[400px] mx-auto font-bold text-white mb-1">
-        {"Volume Control"}
-      </span>
-      <button
-        onClick={func}
-        className="rounded-full h-2/3 w-[150px] bg-blue-500 text-white font-bold"
-      >
-        {"Control"}
-      </button>
-    </div>
-  ),
-  CH: (func, hide) => (
-    <div className={clsx("flex flex-row space-x-2 w-[200px] justify-center text-center items-center")}>
-      <span className="text-xl w-[200px] mx-auto font-bold text-white">
-        {"音量控制"}
-      </span>
-      <button
-        onClick={func}
-        className="rounded-full h-2/3 w-[150px] bg-blue-500 text-white font-bold"
-      >
-        {"控制"}
-      </button>
-    </div>
-  ),
-  TH: (func, hide) => (
-    <div className={clsx("flex flex-row space-x-2 w-[200px] justify-center text-center items-center")}>
-      <span className="text-xl w-[500px] mx-auto font-bold text-white mb-1">
-        {"การควบคุมระดับเสียง"}
-      </span>
-      <button
-        onClick={func}
-        className="rounded-full h-2/3 w-[150px] bg-blue-500 text-white font-bold"
-      >
-        {"ควบคุม"}
-      </button>
-    </div>
-  ),
-  VI: (func) => (
-    <div className={clsx("flex flex-row space-x-2 w-[200px] justify-center text-center items-center")}>
-      <span className="text-xl w-[500px] mx-auto font-bold text-Awhite">
-        {"Kiểm soát âm lượng"}
-      </span>
-      <button
-        onClick={func}
-        className="rounded-full h-2/3 w-[200px] bg-blue-500 text-white font-bold"
-      >
-        {"điều khiển"}
-      </button>
-    </div>
-  ),
-};
+// const volumeControl = {
+//   KOR: (func, hide) => (
+//     <div className="flex flex-row space-x-2 w-[200px] justify-center text-center items-center">
+//       <span className="text-xl w-[200px] mx-auto font-bold text-white">
+//         {"볼륨조절"}
+//       </span>
+//       <button
+//         onClick={func}
+//         className="rounded-full h-2/3 w-[150px] bg-blue-500 text-white font-bold"
+//       >
+//         {"조절"}
+//       </button>
+//     </div>
+//   ),
+//   ENG: (func, hide) => (
+//     <div className={clsx("flex flex-row space-x-2 w-[200px] justify-center text-center items-center")}>
+//       <span className="text-xl w-[400px] mx-auto font-bold text-white mb-1">
+//         {"Volume Control"}
+//       </span>
+//       <button
+//         onClick={func}
+//         className="rounded-full h-2/3 w-[150px] bg-blue-500 text-white font-bold"
+//       >
+//         {"Control"}
+//       </button>
+//     </div>
+//   ),
+//   CH: (func, hide) => (
+//     <div className={clsx("flex flex-row space-x-2 w-[200px] justify-center text-center items-center")}>
+//       <span className="text-xl w-[200px] mx-auto font-bold text-white">
+//         {"音量控制"}
+//       </span>
+//       <button
+//         onClick={func}
+//         className="rounded-full h-2/3 w-[150px] bg-blue-500 text-white font-bold"
+//       >
+//         {"控制"}
+//       </button>
+//     </div>
+//   ),
+//   TH: (func, hide) => (
+//     <div className={clsx("flex flex-row space-x-2 w-[200px] justify-center text-center items-center")}>
+//       <span className="text-xl w-[500px] mx-auto font-bold text-white mb-1">
+//         {"การควบคุมระดับเสียง"}
+//       </span>
+//       <button
+//         onClick={func}
+//         className="rounded-full h-2/3 w-[150px] bg-blue-500 text-white font-bold"
+//       >
+//         {"ควบคุม"}
+//       </button>
+//     </div>
+//   ),
+//   VI: (func) => (
+//     <div className={clsx("flex flex-row space-x-2 w-[200px] justify-center text-center items-center")}>
+//       <span className="text-xl w-[500px] mx-auto font-bold text-Awhite">
+//         {"Kiểm soát âm lượng"}
+//       </span>
+//       <button
+//         onClick={func}
+//         className="rounded-full h-2/3 w-[200px] bg-blue-500 text-white font-bold"
+//       >
+//         {"điều khiển"}
+//       </button>
+//     </div>
+//   ),
+// };
 
 const soundDocent = {
   KOR: (func, sign, sound, hide) => (
@@ -308,7 +308,7 @@ const languageChange = {
 
 const Navbar = ({ url, sign }) => {
   const router = useRouter();
-  const [volume, setVolume] = useState(Number(0.5));
+  // const [volume, setVolume] = useState(Number(0.5));
   const [volumepop, setVolumepop] = useState(false);
   const [soundguide, setSoundguide] = useState(false);
   const [signLang, setsignLang] = useState(false);
@@ -356,7 +356,8 @@ const Navbar = ({ url, sign }) => {
           >
             <Soundguide
               videoUrl={url}
-              volume={Number(volume)}
+              // volume={Number(volume)}
+              volume={1}
               playing={true}
               loop={false}
               end={() => {
@@ -389,7 +390,7 @@ const Navbar = ({ url, sign }) => {
         </div>
       </div>
       )}
-      {volumepop && (
+      {/* {volumepop && (
         <div className="absolute h-8 w-[250px] bottom-24 right-96 rounded-full bg-black bg-opacity-60 items-center z-30">
           <ReactSlider
             step={0.01}
@@ -417,10 +418,10 @@ const Navbar = ({ url, sign }) => {
             }, 3000)}
           />
         </div>
-      )}
+      )} */}
       {/* 언어변경 버튼 */}
       <button 
-          className={clsx(`absolute transform -translate-x-1/2 left-1/2 bottom-52 text-black space-y-4`)}
+          className={clsx(`md:hidden absolute transform -translate-x-1/2 left-1/2 bottom-16 text-black space-y-4`)}
           onClick={()=>setModal(!modal)}    
       >
           <div className="flex flex-col">
@@ -556,11 +557,11 @@ const Navbar = ({ url, sign }) => {
           </div>
         </div>
       )}
-      <nav className={clsx("fixed lg:flex bottom-0 w-screen h-16 bg-blue-800 px-10 items-center")}>
+      <nav className={clsx("fixed lg:flex bottom-0 w-screen h-12 md:h-16 bg-blue-800 px-4 md:px-10 items-center")}>
         <div className="flex flex-row w-full h-full space-x-4 justify-end">
           {/* {languageText[language](() => setModal(!modal), soundguide, signLang)} */}
           {textSize[language](() => setFontsize(!fontsize), fontsize)}
-          {volumeControl[language](() => setVolumepop(!volumepop), docent)}
+          {/* {volumeControl[language](() => setVolumepop(!volumepop), docent)} */}
           {signDocent[language](
             () => setsignLang(!signLang),
             soundguide,
