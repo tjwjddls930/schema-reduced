@@ -6,6 +6,79 @@ import { LanguageContext } from "@/contexts/Langaugecontext";
 import { FontsizeContext } from "@/contexts/Fontsizecontext";
 import { useRouter } from "next/router";
 
+const languageText = {
+  KOR: (func, sound, sign) => (
+    <div className="h-full flex flex-row space-x-2 w-[150px] md:w-[200px] justify-center items-center text-center">
+      <span className="text-base w-[150px] md:w-[200px] mx-auto font-bold text-Awhite">
+        {"언어변경"}
+      </span>
+      <button
+        onClick={func}
+        disabled={sound || sign}
+        className="rounded-full h-2/3 w-[80px] md:w-[150px] bg-Bblue text-white font-bold disabled:opacity-50"
+      >
+        {"KOR"}
+      </button>
+    </div>
+  ),
+  ENG: (func, sound, sign) => (
+    <div className="h-full flex flex-row space-x-2 w-[150px] md:w-[200px] justify-center items-center text-center">
+      <span className="text-sm md:text-lg w-[150px] md:w-[450px] mx-auto font-bold text-Awhite mb-1">
+        {"Language Change"}
+      </span>
+      <button
+        onClick={func}
+        disabled={sound || sign}
+        className="rounded-full h-2/3 w-[80px] md:w-[150px] bg-Bblue text-white font-bold disabled:opacity-50"
+      >
+        {"ENG"}
+      </button>
+    </div>
+  ),
+  CH: (func, sound, sign) => (
+    <div className="h-full flex flex-row space-x-2 w-[150px] md:w-[200px] justify-center items-center text-center">
+      <span className="text-xl w-[150px] md:w-[200px] mx-auto font-bold text-Awhite">
+        {"改变语言"}
+      </span>
+      <button
+        onClick={func}
+        disabled={sound || sign}
+        className="rounded-full h-2/3 w-[80px] md:w-[150px] bg-blue-500 text-white font-bold disabled:opacity-50"
+      >
+        {"CH"}
+      </button>
+    </div>
+  ),
+  TH: (func, sound, sign) => (
+    <div className="h-full flex flex-row space-x-2 w-[150px] md:w-[200px] justify-center items-center text-center">
+      <span className="text-sm md:text-lg w-[150px] md:w-[300px] mx-auto font-bold text-Awhite mb-1">
+        {"เปลี่ยนภาษา"}
+      </span>
+      <button
+        onClick={func}
+        disabled={sound || sign}
+        className="rounded-full h-2/3 w-[80px] md:w-[150px] bg-blue-500 text-white font-bold disabled:opacity-50"
+      >
+        {"TH"}
+      </button>
+    </div>
+  ),
+  VI: (func, sound, sign) => (
+    <div className="h-full flex flex-row space-x-2 w-[150px] md:w-[200px] justify-center items-center text-center">
+      <span className="text-sm md:text-lg w-[150px] md:w-[490px] mx-auto font-bold text-Awhite mb-1">
+        {"Thay đổi ngôn ngữ"}
+      </span>
+      <button
+        onClick={func}
+        disabled={sound || sign}
+        className="rounded-full h-2/3 w-[80px] md:w-[150px] bg-blue-500 text-white font-bold disabled:opacity-50"
+      >
+        {"VI"}
+      </button>
+    </div>
+  ),
+};
+
 const textSize = {
   KOR: (func, size) => (
     <div className="h-full flex flex-row space-x-2 w-[140px] md:w-[200px] justify-center text-center items-center">
@@ -288,23 +361,6 @@ const signDocent = {
   ),
 };
 
-const languageChange = {
-  KOR: (size) => (
-      <span className={`text-base font-bold pt-2 ${size ? `screen-w:text-5xl` : `screen-w:text-4xl`}`}>{"언어 변경"}</span>
-  ),
-  ENG: (size) => (
-      <span className={`text-base font-bold pt-2 ${size ? `screen-w:text-5xl` : `screen-w:text-4xl`}`}>{"Language Change"}</span>
-  ),
-  CH: (size) => (
-      <span className={`text-base font-bold pt-2 ${size ? `screen-w:text-5xl` : `screen-w:text-4xl`}`}>{"改变语言"}</span>
-  ),
-  TH: (size) => (
-      <span className={`text-base font-bold pt-2 ${size ? `screen-w:text-5xl` : `screen-w:text-4xl`}`}>{"เปลี่ยนภาษา"}</span>
-  ),
-  VI: (size) => (
-      <span className={`text-base font-bold pt-2 ${size ? `screen-w:text-5xl` : `screen-w:text-4xl`}`}>{"thay đổi ngôn ngữ"}</span>
-  ),
-};
 
 const Navbar = ({ url, sign }) => {
   const router = useRouter();
@@ -559,7 +615,7 @@ const Navbar = ({ url, sign }) => {
       )}
       <nav className={clsx("fixed lg:flex bottom-0 w-screen h-12 md:h-16 bg-blue-800 px-4 md:px-10 items-center")}>
         <div className="flex flex-row w-full h-full space-x-4 justify-end">
-          {/* {languageText[language](() => setModal(!modal), soundguide, signLang)} */}
+          {languageText[language](() => setModal(!modal), soundguide, signLang)}
           {textSize[language](() => setFontsize(!fontsize), fontsize)}
           {/* {volumeControl[language](() => setVolumepop(!volumepop), docent)} */}
           {signDocent[language](
