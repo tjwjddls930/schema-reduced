@@ -304,8 +304,8 @@ const signDocent = {
     </div>
   ),
   ENG: (func, sound, sign, hide) => (
-    <div className={clsx("h-full flex-row space-x-2 w-[150px] md:w-[200px] justify-center text-center items-center", hide ? "hidden" : "flex")}>
-      <span className="text-sm md:text-lg w-[150px] md:w-[500px] mx-auto font-bold text-white mb-1">
+    <div className={clsx("h-full flex-row space-x-2 w-[200px] md:w-[200px] justify-center text-center items-center", hide ? "hidden" : "flex")}>
+      <span className="text-sm md:text-lg w-[200px] md:w-[500px] mx-auto font-bold text-white mb-1">
         {"Sign Language Guide"}
       </span>
       <button
@@ -346,8 +346,8 @@ const signDocent = {
     </div>
   ),
   VI: (func, sound, sign, hide) => (
-    <div className={clsx("h-full flex-row space-x-2 w-[170px] md:w-[200px] justify-center text-center items-center", hide ? "hidden" : "flex")}>
-      <span className="text-sm md:text-lg w-[170px] md:w-[740px] mx-auto font-bold text-white">
+    <div className={clsx("h-full flex-row space-x-2 w-[200px] md:w-[200px] justify-center text-center items-center", hide ? "hidden" : "flex")}>
+      <span className="text-sm md:text-lg w-[200px] md:w-[740px] mx-auto font-bold text-white">
         {"Hướng dẫn ngôn ngữ ký hiệu"}
       </span>
       <button
