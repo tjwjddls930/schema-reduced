@@ -15,7 +15,7 @@ const languageText = {
       <button
         onClick={func}
         disabled={sound || sign}
-        className="rounded-full h-2/3 w-[80px] md:w-[150px] bg-Bblue text-white font-bold disabled:opacity-50"
+        className="rounded-full h-2/3 w-[80px] md:w-[150px] bg-blue-500 text-white font-bold disabled:opacity-50"
       >
         {"KOR"}
       </button>
@@ -29,7 +29,7 @@ const languageText = {
       <button
         onClick={func}
         disabled={sound || sign}
-        className="rounded-full h-2/3 w-[80px] md:w-[150px] bg-Bblue text-white font-bold disabled:opacity-50"
+        className="rounded-full h-2/3 w-[80px] md:w-[150px] bg-blue-500 text-white font-bold disabled:opacity-50"
       >
         {"ENG"}
       </button>
@@ -361,6 +361,23 @@ const signDocent = {
   ),
 };
 
+const languageChange = {
+  KOR: (size) => (
+      <span className={`text-sm md:text-base font-bold pt-2`}>{"언어 변경"}</span>
+  ),
+  ENG: (size) => (
+      <span className={`text-sm md:text-base font-bold pt-2`}>{"Language Change"}</span>
+  ),
+  CH: (size) => (
+      <span className={`text-sm md:text-base font-bold pt-2`}>{"改变语言"}</span>
+  ),
+  TH: (size) => (
+      <span className={`text-sm md:text-base font-bold pt-2`}>{"เปลี่ยนภาษา"}</span>
+  ),
+  VI: (size) => (
+      <span className={`text-sm md:text-base font-bold pt-2`}>{"thay đổi ngôn ngữ"}</span>
+  ),
+};
 
 const Navbar = ({ url, sign }) => {
   const router = useRouter();
