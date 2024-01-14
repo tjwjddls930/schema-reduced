@@ -422,7 +422,7 @@ const Navbar = ({ url, sign }) => {
           }}
         >
           <div
-            className={clsx("absolute transform -translate-x-1/2 left-1/2 bottom-0 h-[200px] w-[200px] md:h-2/3 md:w-3/4 z-40")}
+            className={clsx("absolute transform -translate-x-1/2 left-1/2 bottom-0 h-[250px] w-[350px] md:h-2/3 md:w-3/4 z-40")}
             onClick={() => {
               setSoundguide(!soundguide)
             }}
@@ -448,7 +448,7 @@ const Navbar = ({ url, sign }) => {
         }}
       >
         <div
-          className={clsx("absolute transform -translate-x-1/2 left-1/2 bottom-0 h-[200px] w-[200px] md:h-2/3 md:w-3/4 z-40")}
+          className={clsx("absolute transform -translate-x-1/2 left-1/2 bottom-0 h-[300px] w-[300px] md:h-2/3 md:w-3/4 z-40")}
           onClick={() => {
             setsignLang(!signLang)
           }}
