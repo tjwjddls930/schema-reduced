@@ -44,99 +44,99 @@ const introButton = {
 
 const exhibitButton = {
     KOR: (size)=> (
-        <div className={`flex flex-col space-y-2 z-30 ${size ? `screen-w:space-y-8` : `screen-w:space-y-4`}`}>
-            <span className={`font-bold text-lg animate-bounce ${size ? `screen-w:text-8xl` : `screen-w:text-6xl`}`}>{"전시 안내"}</span>
-            <span className={`font-bold text-sm ${size ? `screen-w:text-6xl` : `screen-w:text-4xl`}`}>{"디지털 전시 관람 서비스"}</span>
+        <div className={`flex flex-col z-30 ${size ? `space-y-3` : `space-y-2`}`}>
+            <span className={`font-bold animate-bounce ${size ? `text-base` : `text-sm`}`}>{"전시 안내"}</span>
+            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"디지털 전시 관람 서비스"}</span>
         </div>
     ),
     ENG: (size) => (
-        <div className={`flex flex-col space-y-2 z-30 ${size ? `screen-w:space-y-8` : `screen-w:space-y-4`}`}>
-            <span className={`font-bold text-lg animate-bounce ${size ? `screen-w:text-8xl` : `screen-w:text-6xl`}`}>{"Exhibition Guide"}</span>
-            <span className={`font-bold text-sm ${size ? `screen-w:text-6xl` : `screen-w:text-4xl`}`}>{"Digital Exhibition Service"}</span>
+        <div className={`flex flex-col z-30 ${size ? `space-y-3` : `space-y-2`}`}>
+            <span className={`font-bold animate-bounce ${size ? `text-base` : `text-sm`}`}>{"Exhibition Guide"}</span>
+            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"Digital Exhibition Service"}</span>
         </div>
     ),
     CH: (size) => (
-        <div className={`flex flex-col space-y-2 z-30 ${size ? `screen-w:space-y-8` : `screen-w:space-y-4`}`}>
-            <span className={`font-bold text-lg animate-bounce ${size ? `screen-w:text-8xl` : `screen-w:text-6xl`}`}>{"展会信息"}</span>
-            <span className={`font-bold text-sm ${size ? `screen-w:text-6xl` : `screen-w:text-4xl`}`}>{"数字化观展服务"}</span>
+        <div className={`flex flex-col z-30 ${size ? `space-y-3` : `space-y-2`}`}>
+            <span className={`font-bold animate-bounce ${size ? `text-base` : `text-sm`}`}>{"展会信息"}</span>
+            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"数字化观展服务"}</span>
         </div>
     ),
     TH: (size) => (
-        <div className={`flex flex-col space-y-2 z-30 ${size ? `screen-w:space-y-8` : `screen-w:space-y-4`}`}>
-            <span className={`font-bold text-lg animate-bounce ${size ? `screen-w:text-8xl` : `screen-w:text-6xl`}`}>{"ข้อมูลนิทรรศการ"}</span>
-            <span className={`font-bold text-sm ${size ? `screen-w:text-6xl` : `screen-w:text-4xl`}`}>{"บริการชมนิทรรศการดิจิทัล"}</span>
+        <div className={`flex flex-col z-30 ${size ? `space-y-3` : `space-y-2`}`}>
+            <span className={`font-bold animate-bounce ${size ? `text-base` : `text-sm`}`}>{"ข้อมูลนิทรรศการ"}</span>
+            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"บริการชมนิทรรศการดิจิทัล"}</span>
         </div>
     ),
     VI: (size) => (
-        <div className={`flex flex-col space-y-2 z-30 ${size ? `screen-w:space-y-8` : `screen-w:space-y-4`}`}>
-            <span className={`font-bold text-lg animate-bounce ${size ? `screen-w:text-8xl` : `screen-w:text-6xl`}`}>{"Thông tin triển lãm"}</span>
-            <span className={`font-bold text-sm ${size ? `screen-w:text-6xl` : `screen-w:text-4xl`}`}>{"Dịch vụ xem triển lãm kỹ thuật số"}</span>
+        <div className={`flex flex-col z-30 ${size ? `space-y-3` : `space-y-2`}`}>
+            <span className={`font-bold animate-bounce ${size ? `text-base` : `text-sm`}`}>{"Thông tin triển lãm"}</span>
+            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"Dịch vụ xem triển lãm kỹ thuật số"}</span>
         </div>
     ),
 };
 
 const chatbotButton = {
     KOR: (size)=> (
-        <div className={`flex flex-col space-y-2 z-30 ${size ? `screen-w:space-y-8` : `screen-w:space-y-4`}`}>
-            <span className={`font-bold text-lg animate-bounce ${size ? `screen-w:text-8xl` : `screen-w:text-6xl`}`}>{"챗봇 안내"}</span>
-            <span className={`font-bold text-sm ${size ? `screen-w:text-6xl` : `screen-w:text-4xl`}`}>{"Chat GPT 채팅 안내 서비스"}</span>
+        <div className={`flex flex-col z-30 ${size ? `space-y-3` : `space-y-2`}`}>
+            <span className={`font-bold animate-bounce ${size ? `text-base` : `text-sm`}`}>{"챗봇 안내"}</span>
+            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"Chat GPT 채팅 안내 서비스"}</span>
         </div>
     ),
     ENG: (size) => (
-        <div className={`flex flex-col space-y-2 z-30 ${size ? `screen-w:space-y-8` : `screen-w:space-y-4`}`}>
-            <span className={`font-bold text-lg animate-bounce ${size ? `screen-w:text-8xl` : `screen-w:text-6xl`}`}>{"Chatbot Guide"}</span>
-            <span className={`font-bold text-sm ${size ? `screen-w:text-6xl` : `screen-w:text-4xl`}`}>{"Chat GPT Chat Guide Service"}</span>
+        <div className={`flex flex-col z-30 ${size ? `space-y-3` : `space-y-2`}`}>
+            <span className={`font-bold animate-bounce ${size ? `text-base` : `text-sm`}`}>{"Chatbot Guide"}</span>
+            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"Chat GPT Chat Guide Service"}</span>
         </div>
     ),
     CH: (size) => (
-        <div className={`flex flex-col space-y-2 z-30 ${size ? `screen-w:space-y-8` : `screen-w:space-y-4`}`}>
-            <span className={`font-bold text-lg animate-bounce ${size ? `screen-w:text-8xl` : `screen-w:text-6xl`}`}>{"聊天机器人指南"}</span>
-            <span className={`font-bold text-sm ${size ? `screen-w:text-6xl` : `screen-w:text-4xl`}`}>{"Chat GPT 聊天信息服务"}</span>
+        <div className={`flex flex-col z-30 ${size ? `space-y-3` : `space-y-2`}`}>
+            <span className={`font-bold animate-bounce ${size ? `text-base` : `text-sm`}`}>{"聊天机器人指南"}</span>
+            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"Chat GPT 聊天信息服务"}</span>
         </div>
     ),
     TH: (size) => (
-        <div className={`flex flex-col space-y-2 z-30 ${size ? `screen-w:space-y-8` : `screen-w:space-y-4`}`}>
-            <span className={`font-bold text-lg animate-bounce ${size ? `screen-w:text-8xl` : `screen-w:text-6xl`}`}>{"คู่มือแชทบอท"}</span>
-            <span className={`font-bold text-sm ${size ? `screen-w:text-6xl` : `screen-w:text-4xl`}`}>{"บริการข้อมูลแชท GPT แชท"}</span>
+        <div className={`flex flex-col z-30 ${size ? `space-y-3` : `space-y-2`}`}>
+            <span className={`font-bold animate-bounce ${size ? `text-base` : `text-sm`}`}>{"คู่มือแชทบอท"}</span>
+            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"บริการข้อมูลแชท GPT แชท"}</span>
         </div>
     ),
     VI: (size) => (
-        <div className={`flex flex-col space-y-2 z-30 ${size ? `screen-w:space-y-8` : `screen-w:space-y-4`}`}>
-            <span className={`font-bold text-lg animate-bounce ${size ? `screen-w:text-8xl` : `screen-w:text-6xl`}`}>{"Hướng dẫn Chatbot"}</span>
-            <span className={`font-bold text-sm ${size ? `screen-w:text-6xl` : `screen-w:text-4xl`}`}>{"Trò chuyện Dịch vụ thông tin trò chuyện GPT"}</span>
+        <div className={`flex flex-col z-30 ${size ? `space-y-3` : `space-y-2`}`}>
+            <span className={`font-bold animate-bounce ${size ? `text-base` : `text-sm`}`}>{"Hướng dẫn Chatbot"}</span>
+            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"Trò chuyện Dịch vụ thông tin trò chuyện GPT"}</span>
         </div>
     ),
 };
 
 const educationButton = {
     KOR: (size)=> (
-        <div className={`flex flex-col space-y-2 ${size ? `screen-w:space-y-8` : `screen-w:space-y-4`}`}>
-            <span className={`font-bold text-lg animate-bounce ${size ? `screen-w:text-8xl` : `screen-w:text-6xl`}`}>{"교육 프로그램"}</span>
-            <span className={`font-bold text-sm ${size ? `screen-w:text-6xl` : `screen-w:text-4xl`}`}>{"교육 프로그램 정보 제공 서비스"}</span>
+        <div className={`flex flex-col ${size ? `space-y-3` : `space-y-2`}`}>
+            <span className={`font-bold animate-bounce ${size ? `text-base` : `text-sm`}`}>{"교육 프로그램"}</span>
+            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"교육 프로그램 정보 제공 서비스"}</span>
     </div>
     ),
     ENG: (size) => (
-        <div className={`flex flex-col space-y-2 ${size ? `screen-w:space-y-8` : `screen-w:space-y-4`}`}>
-            <span className={`font-bold text-lg animate-bounce ${size ? `screen-w:text-8xl` : `screen-w:text-6xl`}`}>{"Education Program"}</span>
-            <span className={`font-bold text-sm ${size ? `screen-w:text-6xl` : `screen-w:text-4xl`}`}>{"Education Program Information Provision Service"}</span>
+        <div className={`flex flex-col ${size ? `space-y-3` : `space-y-2`}`}>
+            <span className={`font-bold animate-bounce ${size ? `text-base` : `text-sm`}`}>{"Education Program"}</span>
+            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"Education Program Information Provision Service"}</span>
     </div>
     ),
     CH: (size) => (
-        <div className={`flex flex-col space-y-2 ${size ? `screen-w:space-y-8` : `screen-w:space-y-4`}`}>
-            <span className={`font-bold text-lg animate-bounce ${size ? `screen-w:text-8xl` : `screen-w:text-6xl`}`}>{"教育计划"}</span>
-            <span className={`font-bold text-sm ${size ? `screen-w:text-6xl` : `screen-w:text-4xl`}`}>{"教育项目信息提供服务"}</span>
+        <div className={`flex flex-col ${size ? `space-y-3` : `space-y-2`}`}>
+            <span className={`font-bold animate-bounce ${size ? `text-base` : `text-sm`}`}>{"教育计划"}</span>
+            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"教育项目信息提供服务"}</span>
     </div>
     ),
     TH: (size) => (
-        <div className={`flex flex-col space-y-2 ${size ? `screen-w:space-y-8` : `screen-w:space-y-4`}`}>
-            <span className={`font-bold text-lg animate-bounce ${size ? `screen-w:text-8xl` : `screen-w:text-6xl`}`}>{"โปรแกรมการศึกษา"}</span>
-            <span className={`font-bold text-sm ${size ? `screen-w:text-6xl` : `screen-w:text-4xl`}`}>{"บริการจัดหาข้อมูลโปรแกรมการศึกษา"}</span>
+        <div className={`flex flex-col ${size ? `space-y-3` : `space-y-2`}`}>
+            <span className={`font-bold animate-bounce ${size ? `text-base` : `text-sm`}`}>{"โปรแกรมการศึกษา"}</span>
+            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"บริการจัดหาข้อมูลโปรแกรมการศึกษา"}</span>
     </div>
     ),
     VI: (size) => (
-        <div className={`flex flex-col space-y-2 ${size ? `screen-w:space-y-8` : `screen-w:space-y-4`}`}>
-            <span className={`font-bold text-lg animate-bounce ${size ? `screen-w:text-8xl` : `screen-w:text-6xl`}`}>{"chương trình giáo dục"}</span>
-            <span className={`font-bold text-sm ${size ? `screen-w:text-6xl` : `screen-w:text-4xl`}`}>{"Dịch vụ cung cấp thông tin chương trình giáo dục"}</span>
+        <div className={`flex flex-col ${size ? `space-y-3` : `space-y-2`}`}>
+            <span className={`font-bold animate-bounce ${size ? `text-base` : `text-sm`}`}>{"chương trình giáo dục"}</span>
+            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"Dịch vụ cung cấp thông tin chương trình giáo dục"}</span>
     </div>
     ),
 };
@@ -148,7 +148,7 @@ const Button = () => {
 
     return(
         <section className={clsx(
-            "md:w-3/4 w-5/6 md:h-2/3 h-[60%] pt-2 px-4 md:pt-8 md:px-14 flex flex-col space-y-5 mx-auto" )}>
+            "md:w-3/4 w-5/6 md:h-2/3 h-[55%] pt-2 px-4 md:pt-8 md:px-14 flex flex-col space-y-5 mx-auto" )}>
                 <div className="h-1/2 w-full flex flex-row space-x-5 mx-auto items-end">
                     <div className="md:w-[70%] w-[85%] h-full relative shadow-md rounded-sm mx-auto bg-[url('/img/intro_bg.jpg')] bg-cover bg-no-repeat"
                     >

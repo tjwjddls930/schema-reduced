@@ -109,7 +109,7 @@ export default function Home() {
       </div>
       {/* 상단 로고 섹션 */}
       <TopNavbar />
-      <div className="w-5/6 h-12 pt-28 pb-4 md:p-0 md:h-auto flex mx-auto text-center items-center justify-center">
+      <div className="w-5/6 h-12 pt-24 pb-4 md:p-0 md:h-auto flex mx-auto text-center items-center justify-center">
           <span className="flex md:text-base text-xs text-gray-700 font-bold">
               {topText[language]}
           </span>
