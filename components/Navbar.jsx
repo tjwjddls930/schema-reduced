@@ -8,8 +8,8 @@ import { useRouter } from "next/router";
 
 const languageText = {
   KOR: (func, sound, sign) => (
-    <div className="h-full flex flex-row space-x-2 w-[150px] md:w-[200px] justify-center items-center text-center">
-      <span className="text-base w-[150px] md:w-[200px] mx-auto font-bold text-Awhite">
+    <div className="h-full hidden md:flex flex-row space-x-2 w-[150px] md:w-[200px] justify-center items-center text-center">
+      <span className="text-sm md:text-lg w-[150px] md:w-[200px] mx-auto font-bold text-Awhite">
         {"언어변경"}
       </span>
       <button
@@ -22,7 +22,7 @@ const languageText = {
     </div>
   ),
   ENG: (func, sound, sign) => (
-    <div className="h-full flex flex-row space-x-2 w-[150px] md:w-[200px] justify-center items-center text-center">
+    <div className="h-full hidden md:flex flex-row space-x-2 w-[150px] md:w-[200px] justify-center items-center text-center">
       <span className="text-sm md:text-lg w-[150px] md:w-[450px] mx-auto font-bold text-Awhite mb-1">
         {"Language Change"}
       </span>
@@ -36,8 +36,8 @@ const languageText = {
     </div>
   ),
   CH: (func, sound, sign) => (
-    <div className="h-full flex flex-row space-x-2 w-[150px] md:w-[200px] justify-center items-center text-center">
-      <span className="text-xl w-[150px] md:w-[200px] mx-auto font-bold text-Awhite">
+    <div className="h-full hidden md:flex flex-row space-x-2 w-[150px] md:w-[200px] justify-center items-center text-center">
+      <span className="text-sm md:text-xl w-[150px] md:w-[200px] mx-auto font-bold text-Awhite">
         {"改变语言"}
       </span>
       <button
@@ -50,7 +50,7 @@ const languageText = {
     </div>
   ),
   TH: (func, sound, sign) => (
-    <div className="h-full flex flex-row space-x-2 w-[150px] md:w-[200px] justify-center items-center text-center">
+    <div className="h-full hidden md:flex flex-row space-x-2 w-[150px] md:w-[200px] justify-center items-center text-center">
       <span className="text-sm md:text-lg w-[150px] md:w-[300px] mx-auto font-bold text-Awhite mb-1">
         {"เปลี่ยนภาษา"}
       </span>
@@ -64,7 +64,7 @@ const languageText = {
     </div>
   ),
   VI: (func, sound, sign) => (
-    <div className="h-full flex flex-row space-x-2 w-[150px] md:w-[200px] justify-center items-center text-center">
+    <div className="h-full hidden md:flex flex-row space-x-2 w-[150px] md:w-[200px] justify-center items-center text-center">
       <span className="text-sm md:text-lg w-[150px] md:w-[490px] mx-auto font-bold text-Awhite mb-1">
         {"Thay đổi ngôn ngữ"}
       </span>
@@ -81,7 +81,7 @@ const languageText = {
 
 const textSize = {
   KOR: (func, size) => (
-    <div className="h-full flex flex-row space-x-2 w-[140px] md:w-[200px] justify-center text-center items-center">
+    <div className="h-full hidden md:flex flex-row space-x-2 w-[140px] md:w-[200px] justify-center text-center items-center">
       <span className="text-sm md:text-lg w-[140px] md:w-[200px] mx-auto font-bold text-white">
         {"글씨크기"}
       </span>
@@ -94,7 +94,7 @@ const textSize = {
     </div>
   ),
   ENG: (func, size) => (
-    <div className="h-full flex flex-row space-x-2 w-[140px] md:w-[200px] justify-center text-center items-center">
+    <div className="h-full hidden md:flex flex-row space-x-2 w-[140px] md:w-[200px] justify-center text-center items-center">
       <span className="text-sm md:text-lg w-[140px] md:w-[250px] mx-auto font-bold text-white mb-1">
         {"Font Size"}
       </span>
@@ -107,7 +107,7 @@ const textSize = {
     </div>
   ),
   CH: (func, size) => (
-    <div className="h-full flex flex-row space-x-2 w-[140px] md:w-[200px] justify-center text-center items-center">
+    <div className="h-full hidden md:flex flex-row space-x-2 w-[140px] md:w-[200px] justify-center text-center items-center">
       <span className="text-sm md:text-lg w-[140px] md:w-[200px] mx-auto font-bold text-white">
         {"字体大小"}
       </span>
@@ -120,7 +120,7 @@ const textSize = {
     </div>
   ),
   TH: (func, size) => (
-    <div className="h-full flex flex-row space-x-2 w-[140px] md:w-[200px] justify-center text-center items-center">
+    <div className="h-full hidden md:flex flex-row space-x-2 w-[140px] md:w-[200px] justify-center text-center items-center">
       <span className="text-sm md:text-lg w-[140px] md:w-[350px] mx-auto font-bold text-white mb-1">
         {"ขนาดตัวอักษร"}
       </span>
@@ -133,7 +133,7 @@ const textSize = {
     </div>
   ),
   VI: (func, size) => (
-    <div className="h-full flex flex-row space-x-2 w-[140px] md:w-[200px] justify-center text-center items-center">
+    <div className="h-full hidden md:flex flex-row space-x-2 w-[140px] md:w-[200px] justify-center text-center items-center">
       <span className="text-sm md:text-lg w-[140px] md:w-[190px] mx-auto font-bold text-white">
         {"Cỡ chữ"}
       </span>
