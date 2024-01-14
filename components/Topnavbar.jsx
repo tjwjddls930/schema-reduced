@@ -75,10 +75,10 @@ const TopNavbar = () => {
       />
       <div className="flex flex-row space-x-2 text-black md:mr-4">
           <div className="flex flex-col justify-center items-center">
-              <span className="font-bold md:text-sm text-[6px]">{formattedDate}</span>
+              <span className="font-bold md:text-sm text-[7px]">{formattedDate}</span>
               <span className="font-bold md:text-xl text-xs">{formattedTime}</span>
           </div>
-          <span className="rounded-lg shadow-md md:px-4 md:py-4 md:text-lg px-1 py-1 text-sm font-bold">{temperature ? `${temperature}°` : "24°"}</span>
+          <span className="rounded-lg shadow-md md:px-4 md:py-4 md:text-lg px-1 py-1 text-xs font-bold">{temperature ? `${temperature}°` : "24°"}</span>
       </div>
     </div>
   );
