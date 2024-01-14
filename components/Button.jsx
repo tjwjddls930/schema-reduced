@@ -153,7 +153,7 @@ const Button = () => {
                     <div className="md:w-[70%] w-[85%] h-full relative shadow-md rounded-sm mx-auto bg-[url('/img/intro_bg.jpg')] bg-cover bg-no-repeat"
                     >
                         <div className="absolute inset-0 w-full h-full bg-black opacity-10" />
-                        <button className="h-full w-full text-center text-white bg-[url('/img/미술관소개_도형.png')] bg-no-repeat bg-cover mx-auto z-10 hover:translate-y-2"
+                        <button className="h-full w-full text-center text-white bg-[url('/img/미술관소개_도형.png')] bg-no-repeat bg-cover mx-auto z-10"
                             >
                             {introButton[language](fontsize)}
                         </button>

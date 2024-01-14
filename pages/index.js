@@ -101,7 +101,7 @@ export default function Home() {
   }, []);
   return(
     <div className="h-screen w-screen flex flex-col md:items-center md:justify-center">
-      <div className="absolute inset-0 bg-cover bg-no-repeat bg-[url('/img/kiosk_main_bg.png')]"
+      <div className="absolute h-full w-full md:h-auto md:w-auto inset-0 bg-cover bg-no-repeat bg-[url('/img/kiosk_main_bg.png')]"
       style={{
           zIndex: -1
       }}
