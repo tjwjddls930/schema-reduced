@@ -3,6 +3,7 @@ import { LanguageContext } from "@/contexts/Langaugecontext";
 import { useRouter } from "next/router";
 import { useContext } from "react";
 import { collection_KOR, collection_ENG, collection_CH, collection_TH, collection_VI } from "@/data/collectionData";
+import { modelData_KOR, modelData_ENG, modelData_CH, modelData_TH, modelData_VI } from "@/data/modelData";
 import clsx from "clsx";
 
 const introButton = {
@@ -46,32 +47,32 @@ const introButton = {
 const exhibitButton = {
     KOR: (size)=> (
         <div className={`flex flex-col z-30 ${size ? `space-y-3` : `space-y-2`}`}>
-            <span className={`font-bold animate-bounce ${size ? `text-base` : `text-sm`}`}>{"전시 안내"}</span>
-            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"디지털 전시 관람 서비스"}</span>
+            <span className={`font-bold animate-bounce ${size ? `text-base` : `text-sm`}`}>{"미술관 조형물 보기"}</span>
+            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"3D 조형물 감상"}</span>
         </div>
     ),
     ENG: (size) => (
         <div className={`flex flex-col z-30 ${size ? `space-y-3` : `space-y-2`}`}>
-            <span className={`font-bold animate-bounce ${size ? `text-base` : `text-sm`}`}>{"Exhibition Guide"}</span>
-            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"Digital Exhibition Service"}</span>
+            <span className={`font-bold animate-bounce ${size ? `text-base` : `text-sm`}`}>{"View Art Museum Sculptures"}</span>
+            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"View 3D Sculptures"}</span>
         </div>
     ),
     CH: (size) => (
         <div className={`flex flex-col z-30 ${size ? `space-y-3` : `space-y-2`}`}>
-            <span className={`font-bold animate-bounce ${size ? `text-base` : `text-sm`}`}>{"展会信息"}</span>
-            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"数字化观展服务"}</span>
+            <span className={`font-bold animate-bounce ${size ? `text-base` : `text-sm`}`}>{"观赏博物馆雕塑"}</span>
+            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"欣赏3D雕塑"}</span>
         </div>
     ),
     TH: (size) => (
         <div className={`flex flex-col z-30 ${size ? `space-y-3` : `space-y-2`}`}>
-            <span className={`font-bold animate-bounce ${size ? `text-base` : `text-sm`}`}>{"ข้อมูลนิทรรศการ"}</span>
-            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"บริการชมนิทรรศการดิจิทัล"}</span>
+            <span className={`font-bold animate-bounce ${size ? `text-base` : `text-sm`}`}>{"ชมประติมากรรมของพิพิธภัณฑ์"}</span>
+            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"ชื่นชมประติมากรรม 3 มิติ"}</span>
         </div>
     ),
     VI: (size) => (
         <div className={`flex flex-col z-30 ${size ? `space-y-3` : `space-y-2`}`}>
-            <span className={`font-bold animate-bounce ${size ? `text-base` : `text-sm`}`}>{"Thông tin triển lãm"}</span>
-            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"Dịch vụ xem triển lãm kỹ thuật số"}</span>
+            <span className={`font-bold animate-bounce ${size ? `text-base` : `text-sm`}`}>{"Xem các tác phẩm điêu khắc của bảo tàng"}</span>
+            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"Đánh giá cao tác phẩm điêu khắc 3D"}</span>
         </div>
     ),
 };
@@ -112,31 +113,31 @@ const chatbotButton = {
 const educationButton = {
     KOR: (size)=> (
         <div className={`flex flex-col ${size ? `space-y-3` : `space-y-2`}`}>
-            <span className={`font-bold animate-bounce ${size ? `text-base` : `text-sm`}`}>{"교육 프로그램"}</span>
+            <span className={`font-bold ${size ? `text-base` : `text-sm`}`}>{"교육 프로그램"}</span>
             <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"교육 프로그램 정보 제공 서비스"}</span>
     </div>
     ),
     ENG: (size) => (
         <div className={`flex flex-col ${size ? `space-y-3` : `space-y-2`}`}>
-            <span className={`font-bold animate-bounce ${size ? `text-base` : `text-sm`}`}>{"Education Program"}</span>
+            <span className={`font-bold ${size ? `text-base` : `text-sm`}`}>{"Education Program"}</span>
             <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"Education Program Information Provision Service"}</span>
     </div>
     ),
     CH: (size) => (
         <div className={`flex flex-col ${size ? `space-y-3` : `space-y-2`}`}>
-            <span className={`font-bold animate-bounce ${size ? `text-base` : `text-sm`}`}>{"教育计划"}</span>
+            <span className={`font-bold ${size ? `text-base` : `text-sm`}`}>{"教育计划"}</span>
             <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"教育项目信息提供服务"}</span>
     </div>
     ),
     TH: (size) => (
         <div className={`flex flex-col ${size ? `space-y-3` : `space-y-2`}`}>
-            <span className={`font-bold animate-bounce ${size ? `text-base` : `text-sm`}`}>{"โปรแกรมการศึกษา"}</span>
+            <span className={`font-bold ${size ? `text-base` : `text-sm`}`}>{"โปรแกรมการศึกษา"}</span>
             <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"บริการจัดหาข้อมูลโปรแกรมการศึกษา"}</span>
     </div>
     ),
     VI: (size) => (
         <div className={`flex flex-col ${size ? `space-y-3` : `space-y-2`}`}>
-            <span className={`font-bold animate-bounce ${size ? `text-base` : `text-sm`}`}>{"chương trình giáo dục"}</span>
+            <span className={`font-bold ${size ? `text-base` : `text-sm`}`}>{"chương trình giáo dục"}</span>
             <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"Dịch vụ cung cấp thông tin chương trình giáo dục"}</span>
     </div>
     ),
@@ -148,6 +149,14 @@ const inputCollection = {
     CH: collection_CH,
     TH: collection_TH,
     VI: collection_VI,
+};
+
+const inputmodelData = {
+    KOR: modelData_KOR,
+    ENG: modelData_ENG,
+    CH: modelData_CH,
+    TH: modelData_TH,
+    VI: modelData_VI
 };
 
 const Button = () => {
@@ -168,6 +177,7 @@ const Button = () => {
                         </button>
                     </div>
                     <div className="md:w-[70%] w-[85%] h-full relative shadow-md rounded-sm mx-auto bg-[url('/img/exhibit_bg.jpg')] bg-cover bg-no-repeat"
+                        onClick={()=> router.push(`/modelpage/${inputmodelData[language][0].order}`)}
                     >
                         <div className="absolute inset-0 w-full h-full bg-black opacity-10" />
                         <button className="w-full h-full text-center text-white bg-[url('/img/전시안내_도형.png')] bg-cover bg-no-repeat mx-auto z-10">
