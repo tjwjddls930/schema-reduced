@@ -75,7 +75,7 @@ export default function Paintings() {
                 height={data.height * 0.7}
             />
             {/* 그림 넘기기 버튼 */}
-            <div className="absolute left-24 bottom-56 md:left-40 md:bottom-80">
+            <div className="absolute left-24 bottom-40 md:left-40 md:bottom-80">
                 <button
                     className="h-full w-full"
                 >   
@@ -89,7 +89,7 @@ export default function Paintings() {
                     </svg>
                 </button>
             </div>
-            <div className="absolute right-24 bottom-56 md:right-40 md:bottom-80">
+            <div className="absolute right-24 bottom-40 md:right-40 md:bottom-80">
                 <button
                     className="h-full w-full"
                 >   
@@ -104,7 +104,7 @@ export default function Paintings() {
                 </button>
             </div>
             {popup && (
-                <div className="absolute bg-black bg-opacity-40 h-5/6 w-full md:h-full md:w-[600px] bottom-16 left-1/2 transform -translate-x-1/2"
+                <div className="absolute bg-black bg-opacity-40 h-5/6 w-full md:w-[600px] bottom-16 left-1/2 transform -translate-x-1/2"
                     onClick={()=>setPopup(!popup)}
                 >
                     <div className="w-5/6 h-5/6 flex flex-col space-y-32 px-4 mt-16 mx-auto items-center justify-end text-center">
