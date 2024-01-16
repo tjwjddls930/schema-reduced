@@ -388,6 +388,7 @@ const Navbar = ({ url, sign }) => {
   const [modal, setModal] = useState(false);
   const [docent, setDocent] = useState(false);
   const [signbutton, setsignButton] = useState(false);
+  const [hide, setHide] = useState(false);
   const { language, setLanguage } = useContext(LanguageContext);
   const { fontsize, setFontsize } = useContext(FontsizeContext);
 
@@ -409,7 +410,15 @@ const Navbar = ({ url, sign }) => {
     } else {
       setsignButton(false);
     }
-  }, [sign])
+  }, [sign]);
+
+  // useEffect(() => {
+  //   if(router.pathname === "/") {
+  //     setHide(true);
+  //   } else {
+  //     setHide(false);
+  //   }
+  // }, [router.pathname]);
 
   // console.log(url);
   return (
@@ -463,38 +472,10 @@ const Navbar = ({ url, sign }) => {
         </div>
       </div>
       )}
-      {/* {volumepop && (
-        <div className="absolute h-8 w-[250px] bottom-24 right-96 rounded-full bg-black bg-opacity-60 items-center z-30">
-          <ReactSlider
-            step={0.01}
-            min={0}
-            max={1}
-            className="w-[180px] h-3 bg-Awhite rounded-full cursor-grab mt-2 mx-auto"
-            thumbClassName="absolute w-5 h-5 cursor-grab bg-blue-800 rounded-full border-2 border-white -top-1"
-            trackClassName="top-0 bottom-0 bg-white bg-purple-500"
-            renderTrack={(props, state) => (
-              <div
-                {...props}
-                className={clsx(
-                  "h-3 rounded-full cursor-pointer",
-                  {
-                    "bg-white": state.index === 1,
-                    "bg-blue-800": state.index === 0,
-                  }
-                )}
-              ></div>
-            )}
-            value={volume}
-            onChange={(value) => setVolume(value)}
-            onAfterChange={()=> setTimeout(()=> {
-              setVolumepop(!volumepop)
-            }, 3000)}
-          />
-        </div>
-      )} */}
+
       {/* 언어변경 버튼 */}
       <button 
-          className={clsx(`md:hidden absolute transform -translate-x-1/2 left-1/2 bottom-12 text-black space-y-4`)}
+          className={clsx("absolute md:hidden transform -translate-x-1/2 left-1/2 bottom-12 text-black space-y-4")}
           onClick={()=>setModal(!modal)}    
       >
           <div className="flex flex-col">

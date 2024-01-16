@@ -1,7 +1,8 @@
 import { useRouter } from "next/router";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { LanguageContext } from "@/contexts/Langaugecontext";
 import clsx from "clsx";
+import Soundguide from "../Soundguide";
 
 const iconText1 = {
     KOR: "초기화",
@@ -27,9 +28,10 @@ const iconText3 = {
     VI: "Thông tin Chatbot",
 };
 
-const Viewlayout = ({children}) => {
+const Viewlayout = ({children, url}) => {
     const {language} = useContext(LanguageContext)
     const router = useRouter();
+    const [soundguide, setSoundguide] = useState(false);
     function handleRefresh() {
         router.reload();
     };
@@ -52,7 +54,9 @@ const Viewlayout = ({children}) => {
                 </div>
             </div>
             {/* 작품해설 */}
-            <div className="h-[140px] w-[100px] absolute left-2 md:left-10 bottom-72">
+            <div className="h-[140px] w-[100px] absolute left-2 md:left-10 bottom-72"
+                onClick={() => setSoundguide(!soundguide)}
+            >
                 <div className="flex flex-col mx-auto text-center space-y-2 screen-w:space-y-4">
                     <button className="h-6 w-6 ml-8 md:h-12 md:w-12 md:ml-6"> 
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" 
@@ -83,6 +87,32 @@ const Viewlayout = ({children}) => {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3" />
                 </svg>
             </button>
+            {soundguide && (
+                <div
+                className={clsx("absolute top-0 left-0 h-full md:h-[91.5%] w-screen bg-black bg-opacity-60 z-20")}
+                onClick={() => {
+                    setSoundguide(!soundguide)
+                }}
+                >
+                <div
+                    className={clsx("absolute transform -translate-x-1/2 left-1/2 bottom-0 h-[250px] w-[350px] md:h-2/3 md:w-3/4 z-40")}
+                    onClick={() => {
+                    setSoundguide(!soundguide)
+                    }}
+                >
+                    <Soundguide
+                        videoUrl={url}
+                        // volume={Number(volume)}
+                        volume={1}
+                        playing={true}
+                        loop={false}
+                        end={() => {
+                            setSoundguide(!soundguide)
+                        }}
+                    />
+                </div>
+                </div>
+            )}
         </div>
     )
 };

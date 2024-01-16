@@ -20,7 +20,7 @@ const Viewcontent = ({url, width, height}) => {
         // <div className="h-[91%] w-[1000px] absolute bottom-16 screen-w:h-[94%] screen-w:w-[1500px] screen-w:bottom-28 left-1/2 transform -translate-x-1/2">
         <>
         {isClient && (
-        <div className={clsx("absolute h-[92%] w-full bottom-16 left-1/2 transform -translate-x-1/2")}>
+        <div className={clsx("absolute h-full w-full bottom-16 left-1/2 transform -translate-x-1/2")}>
             <div className="h-[50px] w-[50px] z-10 absolute bottom-20 right-20 border-2 border-black rounded-full bg-blue-500"
                 onClick={()=> setColor("#5c92de")}
             />
