@@ -42,7 +42,7 @@ const Viewlayout = ({children, url}) => {
             <div className="h-[200px] w-[100px] absolute left-2 md:left-10 bottom-80">
                 <div className="flex flex-col mx-auto text-center space-y-2">
                     <button 
-                        className="h-6 w-6 ml-8 md:h-12 md:w-12 md:ml-6"
+                        className="h-8 w-8 ml-6 md:h-12 md:w-12 md:ml-6"
                         onClick={handleRefresh}
                     > 
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" 
@@ -58,7 +58,7 @@ const Viewlayout = ({children, url}) => {
                 onClick={() => setSoundguide(!soundguide)}
             >
                 <div className="flex flex-col mx-auto text-center space-y-2 screen-w:space-y-4">
-                    <button className="h-6 w-6 ml-8 md:h-12 md:w-12 md:ml-6"> 
+                    <button className="h-8 w-8 ml-6 md:h-12 md:w-12 md:ml-6"> 
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" 
                             className="w-full h-full text-black">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
@@ -70,7 +70,7 @@ const Viewlayout = ({children, url}) => {
              {/* 챗봇안내 */}
              <div className="h-[140px] w-[100px] absolute bottom-48 left-2 md:left-10">
                 <div className="flex flex-col mx-auto text-center space-y-2 screen-w:space-y-4">
-                    <button className="h-6 w-6 ml-8 md:h-12 md:w-12 md:ml-6"> 
+                    <button className="h-8 w-8 ml-6 md:h-12 md:w-12 md:ml-6"> 
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" 
                         className="w-full h-full text-black">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
@@ -79,17 +79,17 @@ const Viewlayout = ({children, url}) => {
                         <span className="text-black text-sm md:text-base font-bold">{iconText3[language]}</span>
                 </div>
             </div>
-            <button className={clsx("absolute left-16 bottom-28")}
+            <button className={clsx("absolute left-12 bottom-20 md:left-16 md:bottom-28")}
                 onClick={()=> router.push("/")}
             >
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" 
-                    className="w-6 h-6 md:w-12 md:h-12 text-black">
+                    className="w-8 h-8 md:w-12 md:h-12 text-black">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3" />
                 </svg>
             </button>
             {soundguide && (
                 <div
-                className={clsx("absolute top-0 left-0 h-full md:h-[91.5%] w-screen bg-black bg-opacity-60 z-20")}
+                className={clsx("absolute top-0 left-0 h-full w-full bg-black bg-opacity-60 z-20")}
                 onClick={() => {
                     setSoundguide(!soundguide)
                 }}

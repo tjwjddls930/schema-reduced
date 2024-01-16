@@ -75,28 +75,28 @@ export default function Paintings() {
                 height={data.height * 0.7}
             />
             {/* 그림 넘기기 버튼 */}
-            <div className="absolute left-24 md:left-40 bottom-80">
+            <div className="absolute left-24 bottom-56 md:left-40 md:bottom-80">
                 <button
                     className="h-full w-full"
                 >   
                     <svg 
                         id="left"
                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" strokeWidth="1.5" stroke="currentColor" 
-                        className="w-6 h-6 md:w-12 md:h-12 text-black"
+                        className="w-8 h-8 md:w-12 md:h-12 text-black"
                         onClick={()=>changeExhibit(-1)}
                     >
                         <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                     </svg>
                 </button>
             </div>
-            <div className="absolute right-24 md:right-40 bottom-80">
+            <div className="absolute right-24 bottom-56 md:right-40 md:bottom-80">
                 <button
                     className="h-full w-full"
                 >   
                     <svg 
                         id="right"
                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" strokeWidth="1.5" stroke="currentColor" 
-                        className="w-6 h-6 md:w-12 md:h-12 text-black"
+                        className="w-8 h-8 md:w-12 md:h-12 text-black"
                         onClick={()=>changeExhibit(1)}
                     >
                         <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
@@ -104,7 +104,7 @@ export default function Paintings() {
                 </button>
             </div>
             {popup && (
-                <div className="absolute bg-black bg-opacity-40 h-5/6 w-full md:h-[91%] md:w-[600px] bottom-16 left-1/2 transform -translate-x-1/2"
+                <div className="absolute bg-black bg-opacity-40 h-5/6 w-full md:h-full md:w-[600px] bottom-16 left-1/2 transform -translate-x-1/2"
                     onClick={()=>setPopup(!popup)}
                 >
                     <div className="w-5/6 h-5/6 flex flex-col space-y-32 px-4 mt-16 mx-auto items-center justify-end text-center">
