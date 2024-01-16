@@ -71,32 +71,32 @@ export default function Paintings() {
             {/* 3D 콘텐츠 구역 */}
             <Viewcontent 
                 url={data.imgname}
-                width={data.width}
-                height={data.height}
+                width={data.width * 0.7}
+                height={data.height * 0.7}
             />
             {/* 그림 넘기기 버튼 */}
-            <div className="absolute left-40 bottom-80">
+            <div className="absolute left-24 md:left-40 bottom-80">
                 <button
                     className="h-full w-full"
                 >   
                     <svg 
                         id="left"
                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" strokeWidth="1.5" stroke="currentColor" 
-                        className="w-12 h-12 text-black"
+                        className="w-6 h-6 md:w-12 md:h-12 text-black"
                         onClick={()=>changeExhibit(-1)}
                     >
                         <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                     </svg>
                 </button>
             </div>
-            <div className="absolute right-40 bottom-80">
+            <div className="absolute right-24 md:right-40 bottom-80">
                 <button
                     className="h-full w-full"
                 >   
                     <svg 
                         id="right"
                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" strokeWidth="1.5" stroke="currentColor" 
-                        className="w-12 h-12 text-black"
+                        className="w-6 h-6 md:w-12 md:h-12 text-black"
                         onClick={()=>changeExhibit(1)}
                     >
                         <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
@@ -104,7 +104,7 @@ export default function Paintings() {
                 </button>
             </div>
             {popup && (
-                <div className="absolute bg-black bg-opacity-40 h-5/6 w-3/4 md:h-[91%] md:w-[600px] bottom-16 left-1/2 transform -translate-x-1/2"
+                <div className="absolute bg-black bg-opacity-40 h-5/6 w-full md:h-[91%] md:w-[600px] bottom-16 left-1/2 transform -translate-x-1/2"
                     onClick={()=>setPopup(!popup)}
                 >
                     <div className="w-5/6 h-5/6 flex flex-col space-y-32 px-4 mt-16 mx-auto items-center justify-end text-center">
@@ -114,7 +114,7 @@ export default function Paintings() {
                         </div>
                         <div className="flex flex-col space-y-2 mx-auto w-full">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" 
-                                className="h-20 w-20 animate-bounce mx-auto text-white">
+                                className="h-12 w-12 md:h-20 md:w-20 animate-bounce mx-auto text-white">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607zM10.5 7.5v6m3-3h-6" />
                             </svg>
                             <span className="text-white font-bold text-sm md:text-base">{popupText[language]}</span>
