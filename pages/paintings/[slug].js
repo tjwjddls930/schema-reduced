@@ -67,7 +67,7 @@ export default function Paintings() {
     return(
         <>
         {data && (
-            <Viewlayout url={video}>
+            <Viewlayout>
             {/* 3D 콘텐츠 구역 */}
             <Viewcontent 
                 url={data.imgname}
@@ -104,7 +104,7 @@ export default function Paintings() {
                 </button>
             </div>
             {popup && (
-                <div className="absolute bg-black bg-opacity-40 h-5/6 w-full md:w-[600px] bottom-16 left-1/2 transform -translate-x-1/2"
+                <div className="absolute bg-black bg-opacity-40 h-5/6 w-full md:h-[92%] md:w-[600px] bottom-16 left-1/2 transform -translate-x-1/2"
                     onClick={()=>setPopup(!popup)}
                 >
                     <div className="w-5/6 h-5/6 flex flex-col space-y-32 px-4 mt-16 mx-auto items-center justify-end text-center">
@@ -133,9 +133,9 @@ export default function Paintings() {
                     </div>
                 </div>
             )}
-            {/* <Navbar 
+            <Navbar 
                 url={video}
-            /> */}
+            />
         </Viewlayout>
         )}
         </>

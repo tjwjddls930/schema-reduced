@@ -21,10 +21,10 @@ const Viewcontent = ({url, width, height}) => {
         <>
         {isClient && (
         <div className={clsx("absolute h-full w-full md:h-full md:w-full bottom-16 left-1/2 transform -translate-x-1/2")}>
-            <div className="h-12 w-12 md:h-[50px] md:w-[50px] z-10 absolute bottom-6 right-12 md:bottom-20 md:right-20 border-2 border-black rounded-full bg-blue-500"
+            <div className="h-10 w-10 md:h-[50px] md:w-[50px] z-10 absolute bottom-4 right-12 md:bottom-20 md:right-20 border-2 border-black rounded-full bg-blue-500"
                 onClick={()=> setColor("#5c92de")}
             />
-            <div className="h-12 w-12 md:h-[50px] md:w-[50px] z-10 absolute bottom-6 right-28 md:bottom-20 md:right-64 border-2 border-black rounded-full bg-white"
+            <div className="h-10 w-10 md:h-[50px] md:w-[50px] z-10 absolute bottom-4 right-28 md:bottom-20 md:right-64 border-2 border-black rounded-full bg-white"
                 onClick={()=> setColor("#FFFFFF")}
             />
             <Canvas

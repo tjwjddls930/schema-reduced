@@ -388,7 +388,7 @@ const Navbar = ({ url, sign }) => {
   const [modal, setModal] = useState(false);
   const [docent, setDocent] = useState(false);
   const [signbutton, setsignButton] = useState(false);
-  const [hide, setHide] = useState(false);
+  const [hide, setHide] = useState(true);
   const { language, setLanguage } = useContext(LanguageContext);
   const { fontsize, setFontsize } = useContext(FontsizeContext);
 
@@ -412,13 +412,13 @@ const Navbar = ({ url, sign }) => {
     }
   }, [sign]);
 
-  // useEffect(() => {
-  //   if(router.pathname === "/") {
-  //     setHide(true);
-  //   } else {
-  //     setHide(false);
-  //   }
-  // }, [router.pathname]);
+  useEffect(() => {
+    if(router.pathname === "/") {
+      setHide(false);
+    } else {
+      setHide(true);
+    }
+  }, [router.pathname]);
 
   // console.log(url);
   return (
@@ -475,7 +475,7 @@ const Navbar = ({ url, sign }) => {
 
       {/* 언어변경 버튼 */}
       <button 
-          className={clsx("absolute md:hidden transform -translate-x-1/2 left-1/2 bottom-12 text-black space-y-4")}
+          className={clsx("transform -translate-x-1/2 left-1/2 bottom-12 text-black space-y-4", hide ? "hidden" : "absolute md:hidden")}
           onClick={()=>setModal(!modal)}    
       >
           <div className="flex flex-col">
