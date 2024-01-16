@@ -1,6 +1,7 @@
 import { useState, useContext, useEffect } from "react";
 import ReactSlider from "react-slider";
-import Soundguide from "./Soundguide";
+// import Soundguide from "./Soundguide";
+import Docent from "./Docent";
 import clsx from "clsx";
 import { LanguageContext } from "@/contexts/Langaugecontext";
 import { FontsizeContext } from "@/contexts/Fontsizecontext";
@@ -436,7 +437,7 @@ const Navbar = ({ url, sign }) => {
               setSoundguide(!soundguide)
             }}
           >
-            <Soundguide
+            <Docent
               videoUrl={url}
               // volume={Number(volume)}
               volume={1}
@@ -462,9 +463,10 @@ const Navbar = ({ url, sign }) => {
             setsignLang(!signLang)
           }}
         >
-          <Soundguide
+          <Docent
             videoUrl={sign}
             volume={0}
+            muted={true}
             playing={true}
             loop={false}
             end={() => setsignLang(!signLang)}
