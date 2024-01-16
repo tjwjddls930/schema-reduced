@@ -2,42 +2,43 @@ import { FontsizeContext } from "@/contexts/Fontsizecontext";
 import { LanguageContext } from "@/contexts/Langaugecontext";
 import { useRouter } from "next/router";
 import { useContext } from "react";
+import { collection_KOR, collection_ENG, collection_CH, collection_TH, collection_VI } from "@/data/collectionData";
 import clsx from "clsx";
 
 const introButton = {
     KOR: (size)=> (
         <div className={`flex flex-col ${size ? `space-y-3` : `space-y-2`}`}>
-            <span className={`font-bold animate-bounce ${size ? `text-base` : `text-sm`}`}>{"미술관 소개"}</span>
-            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"김재관 및 미술관 소개"}</span>
-            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"쉐마국제미술상"}</span>
+            <span className={`font-bold animate-bounce ${size ? `text-base` : `text-sm`}`}>{"미술관 그림 보기"}</span>
+            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"3D 그림 감상"}</span>
+            {/* <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"쉐마국제미술상"}</span> */}
         </div>
     ),
     ENG: (size) => (
         <div className={`flex flex-col ${size ? `space-y-3` : `space-y-2`}`}>
-            <span className={`font-bold animate-bounce ${size ? `text-base` : `text-sm`}`}>{"Museum Introduction"}</span>
-            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"Museum Introduction and Structure"}</span>
-            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"Jai-Kwan Kim Career Exprience"}</span>
+            <span className={`font-bold animate-bounce ${size ? `text-base` : `text-sm`}`}>{"View Paintings"}</span>
+            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"Enjoy 3D paintings"}</span>
+            {/* <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"Jai-Kwan Kim Career Exprience"}</span> */}
         </div>
     ),
     CH: (size) => (
         <div className={`flex flex-col ${size ? `space-y-3` : `space-y-2`}`}>
-            <span className={`font-bold animate-bounce ${size ? `text-base` : `text-sm`}`}>{"博物馆简介"}</span>
-            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"博物馆简介及结构"}</span>
-            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"Jai-Kwan Kim 主要职业经历"}</span>
+            <span className={`font-bold animate-bounce ${size ? `text-base` : `text-sm`}`}>{"观赏美术馆画作"}</span>
+            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"享受3D绘画"}</span>
+            {/* <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"Jai-Kwan Kim 主要职业经历"}</span> */}
         </div>
     ),
     TH: (size) => (
         <div className={`flex flex-col ${size ? `space-y-3` : `space-y-2`}`}>
-            <span className={`font-bold animate-bounce ${size ? `text-base` : `text-sm`}`}>{"ความรู้เบื้องต้นเกี่ยวกับพิพิธภัณฑ์"}</span>
-            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"บทนำและโครงสร้างของพิพิธภัณฑ์"}</span>
-            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"ประสบการณ์การทำงานระดับเมเจอร์ของแจกวาน คิม"}</span>
+            <span className={`font-bold animate-bounce ${size ? `text-base` : `text-sm`}`}>{"ชมภาพวาดของพิพิธภัณฑ์ศิลปะ"}</span>
+            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"เพลิดเพลินกับภาพวาด 3 มิติ"}</span>
+            {/* <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"ประสบการณ์การทำงานระดับเมเจอร์ของแจกวาน คิม"}</span> */}
         </div>
     ),
     VI: (size) => (
         <div className={`flex flex-col ${size ? `space-y-3` : `space-y-2`}`}>
-            <span className={`font-bold animate-bounce ${size ? `text-base` : `text-sm`}`}>{"Giới thiệu về bảo tàng"}</span>
-            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"Giới thiệu và cấu trúc bảo tàng"}</span>
-            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"Jai-Kwan Kim Kinh nghiệm nghề nghiệp chính"}</span>
+            <span className={`font-bold animate-bounce ${size ? `text-base` : `text-sm`}`}>{"Xem tranh bảo tàng nghệ thuật"}</span>
+            <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"Thưởng thức tranh 3D"}</span>
+            {/* <span className={`font-bold ${size ? `text-sm` : `text-xs`}`}>{"Jai-Kwan Kim Kinh nghiệm nghề nghiệp chính"}</span> */}
         </div>
     ),
 };
@@ -141,6 +142,14 @@ const educationButton = {
     ),
 };
 
+const inputCollection = {
+    KOR: collection_KOR,
+    ENG: collection_ENG,
+    CH: collection_CH,
+    TH: collection_TH,
+    VI: collection_VI,
+};
+
 const Button = () => {
     const router = useRouter();
     const {language} = useContext(LanguageContext);
@@ -151,10 +160,10 @@ const Button = () => {
             "md:w-3/4 w-5/6 md:h-2/3 h-[55%] pt-2 px-4 md:pt-8 md:px-14 flex flex-col space-y-5 mx-auto" )}>
                 <div className="h-1/2 w-full flex flex-row space-x-5 mx-auto items-end">
                     <div className="md:w-[70%] w-[85%] h-full relative shadow-md rounded-sm mx-auto bg-[url('/img/intro_bg.jpg')] bg-cover bg-no-repeat"
+                        onClick={()=>router.push(`/paintings/${inputCollection[language][0].order}?year=${inputCollection[language][0].time}`)}
                     >
                         <div className="absolute inset-0 w-full h-full bg-black opacity-10" />
-                        <button className="h-full w-full text-center text-white bg-[url('/img/미술관소개_도형.png')] bg-no-repeat bg-cover mx-auto z-10"
-                            >
+                        <button className="h-full w-full text-center text-white bg-[url('/img/미술관소개_도형.png')] bg-no-repeat bg-cover mx-auto z-10">
                             {introButton[language](fontsize)}
                         </button>
                     </div>
