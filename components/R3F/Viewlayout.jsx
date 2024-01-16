@@ -87,32 +87,6 @@ const Viewlayout = ({children, url}) => {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3" />
                 </svg>
             </button>
-            {/* {soundguide && (
-                <div
-                className={clsx("absolute top-0 left-0 h-full w-full bg-black bg-opacity-60 z-20")}
-                onClick={() => {
-                    setSoundguide(!soundguide)
-                }}
-                >
-                    <div
-                        className={clsx("absolute transform -translate-x-1/2 left-1/2 bottom-0 h-[250px] w-[350px] md:h-2/3 md:w-3/4 z-40")}
-                        onClick={() => {
-                        setSoundguide(!soundguide)
-                        }}
-                    >
-                        <Soundguide
-                            videoUrl={url}
-                            // volume={Number(volume)}
-                            volume={1}
-                            playing={true}
-                            loop={false}
-                            end={() => {
-                                setSoundguide(!soundguide)
-                            }}
-                        />
-                    </div>
-                </div>
-            )} */}
         </div>
     )
 };
