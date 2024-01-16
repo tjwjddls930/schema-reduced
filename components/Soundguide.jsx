@@ -6,6 +6,7 @@ const DynamicReactPlayer = dynamic(() => import('react-player'), {ssr: false});
 const Soundguide = ({videoUrl, volume, muted, playing, end, loop, ...props}) => {
     return (
     <DynamicReactPlayer
+        playsinline={true}
         url={videoUrl}
         width="100%"
         height="100%"
