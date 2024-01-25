@@ -452,7 +452,7 @@ const Navbar = ({ url, sign }) => {
       )}
       {signLang && (
         <div
-        className={clsx("absolute top-0 left-0 h-[94%] md:h-[91.5%] w-screen custom-gradient bg-opacity-60 z-20")}
+        className={clsx("absolute top-0 left-0 h-[94%] md:h-[91.5%] w-screen bg-black bg-opacity-60 z-20")}
         onClick={() => {
           setsignLang(!signLang)
         }}
