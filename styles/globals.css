@@ -25,3 +25,7 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.custom-gradient {
+  background-image: linear-gradient(to top, rgba(100, 116, 139, 1) 40%, rgba(100, 116, 139, 0.5) 80%, transparent 100%);
+}
